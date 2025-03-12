@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&family=Zen+Dots&display=swap");
+
+@import "tailwindcss";
+
+#root,
+html,
+body {
+  padding: 0;
+  margin: 0;
+  cursor: url("https://img.icons8.com/?size=20&id=FxKnU8qeeiCj&format=png&color=000000"),
+    auto;
+}
+ul > li {
+  font-family: "Zen Dots", sans-serif;
+  cursor: url("https://img.icons8.com/?size=30&id=TcPxEIKHdr0o&format=png&color=000000")
+      15 15,
+    auto;
+}
+.aIMG {
+  cursor: url("https://img.icons8.com/?size=30&id=TcPxEIKHdr0o&format=png&color=000000")
+      15 15,
+    auto;
+}
+.aPROF {
+  font-family: "Share Tech Mono";
+}
+.aPARA {
+  font-family: "Share Tech Mono";
+}
+
+.group {
+  cursor: url("https://img.icons8.com/?size=30&id=TcPxEIKHdr0o&format=png&color=000000"),
+    auto;
+}
+.aProfBTN button {
+  cursor: url("https://img.icons8.com/?size=30&id=TcPxEIKHdr0o&format=png&color=000000")
+      15 15,
+    auto;
+  font-family: "Share Tech Mono", sans-serif;
+}
+.skillCard {
+  cursor: url("https://img.icons8.com/?size=30&id=TcPxEIKHdr0o&format=png&color=000000")
+      15 15,
+    auto;
+  font-family: "Share Tech Mono", sans-serif;
+}
+.skillCard h2 {
+  font-family: "Zen Dots", sans-serif;
+  transition: font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.quoteBTN {
+  cursor: url("https://img.icons8.com/?size=30&id=TcPxEIKHdr0o&format=png&color=000000")
+      15 15,
+    auto;
+  font-family: "Share Tech Mono", sans-serif;
+}
+.quote {
+  font-family: "Share Tech Mono", sans-serif;
+}
