@@ -68,7 +68,7 @@ function Hero() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        <motion.div whileHover={{ scale: 1.1 }} clasName="aProfBTN">
+        <motion.div whileHover={{ scale: 1.1 }} className="aProfBTN">
           <a
             href="https://leetcode.com/u/AymaanShabbir/"
             target="_blank"
