@@ -63,12 +63,12 @@ function Hero() {
 
       {/* PROFILES*/}
       <motion.div
-        className="mt-3 flex gap-4 z-20"
+        className="mt-1 flex gap-4 z-20"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        <motion.div whileHover={{ scale: 1.1 }} className="aProfBTN">
+        <motion.div whileHover={{ scale: 1.1 }} clasName="aProfBTN">
           <a
             href="https://leetcode.com/u/AymaanShabbir/"
             target="_blank"
