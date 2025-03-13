@@ -72,7 +72,7 @@ const projects = [
 const experimentalProjects = [
   {
     title: "FYLE",
-    description: "A landing page for a music school.",
+    description: "A landing page for FYLE.",
     techStack: ["HTML", "CSS", "JavaScript"],
     image: "/aichatbot.png",
     website: "https://fylelanding.netlify.app/",
