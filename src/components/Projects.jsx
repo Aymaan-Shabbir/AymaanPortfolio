@@ -133,7 +133,7 @@ function Projects() {
       style={{ backgroundColor: isInView ? "#aa0505" : "#F3D545" }}
     >
       <motion.h2
-        className="text-2xl font-bold mb-5 animHead text-[#F3D545]"
+        className="text-2xl font-bold mb-5 animHead text-[#F3D545] text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -141,7 +141,7 @@ function Projects() {
         Production Level Applications.
       </motion.h2>
 
-      <div className="projCard grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl">
+      <div className="projCard grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl p-3 m-3">
         {projects.map((project, index) => (
           <motion.div
             key={index}
@@ -161,7 +161,7 @@ function Projects() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <h3 className="projName text-lg font-semibold mt-2 text-[#F3D545]">
+            <h3 className="projName text-3xl sm:text-xl font-semibold mt-2 text-[#F3D545]">
               {project.title}
             </h3>
             <p className="projP text-white text-sm mb-1">
@@ -209,7 +209,14 @@ function Projects() {
           {experimentalProjects.map((project, index) => (
             <motion.div
               key={index}
-              className="bg-[#1E1E1E] p-6 rounded-lg shadow-md border border-gray-700 transition-transform hover:scale-105"
+              className="bg-[#1e1e1e] py-3 px-3 rounded-lg shadow-md transition-transform hover:scale-105"
+              whileHover={{
+                scale: 1.01,
+                rotate: 1.3,
+                boxShadow: "0px 0px 20px rgba(255, 214, 90, 0.8)",
+                borderColor: "#FFD65A",
+              }}
+              transition={{ type: "spring", stiffness: 200 }}
             >
               <div className="h-36 md:h-48 w-full bg-gray-700 rounded-lg overflow-hidden">
                 <img
@@ -218,7 +225,7 @@ function Projects() {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <h3 className="projName text-xl font-semibold mt-4 text-[#F3D545]">
+              <h3 className="projName text-3xl sm:text-xl font-semibold mt-4 text-[#F3D545]">
                 {project.title}
               </h3>
               <p className="projP text-[#F3D545]-400 mb-2">
@@ -234,15 +241,15 @@ function Projects() {
                   </span>
                 ))}
               </div>
-              <div className="flex gap-3 mt-4">
+              <div className="flex  mt-4 gap-3 justify-center">
                 {project.github && (
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-gray-700 text-white rounded-lg text-sm font-medium hover:bg-gray-600 transition"
+                    className="flex items-center gap-2 px-2 py-1 bg-gray-700 rounded-lg hover:bg-gray-600 text-sm"
                   >
-                    <FaGithub />
+                    <FaGithub /> Github
                   </a>
                 )}
                 {project.website && (
@@ -250,16 +257,16 @@ function Projects() {
                     href={project.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-500 transition"
+                    className="flex items-center px-2 py-1 gap-2 bg-blue-600 text-white rounded-lg text-sm  hover:bg-blue-500 transition"
                   >
-                    <FaExternalLinkAlt />
+                    <FaExternalLinkAlt /> Live
                   </a>
                 )}
               </div>
             </motion.div>
           ))}
-          <h2 className="text-center m-auto italic text-[#F3D545]">
-            "These are just some Frone-End exercises.""
+          <h2 className="text-center m-auto italic text-[#F3D545] text-lg">
+            "These are just some Front-End exercises."
           </h2>
         </div>
       )}
