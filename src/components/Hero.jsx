@@ -9,9 +9,9 @@ function Hero() {
       <motion.img
         src={techGif}
         alt="Tech Animation"
-        className="absolute top-0 left-0 w-full h-full object-contain opacity-10 z-0"
+        className="absolute top-0 left-0 w-full h-full object-contain opacity-100 z-0 text-black"
         initial={{ opacity: 0 }}
-        animate={{ opacity: 0.1 }}
+        animate={{ opacity: 0.2 }}
         transition={{ duration: 2 }}
       />
 
