@@ -50,7 +50,7 @@ function Hero() {
       </motion.h1>
 
       <motion.p
-        className="text-lg text-gray-300  max-w-lg z-20 mt-3 aPARA mx-2"
+        className="text-lg text-gray-300  max-w-2xl z-20 my-4 aPARA mx-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}
