@@ -4,7 +4,7 @@ import Hero from "./Hero";
 
 function Home() {
   return (
-    <div id="Home" className="w-full min-h-screen bg-[#bb2b2b]  pt-20 pb-10">
+    <div id="Home" className="w-full min-h-screen bg-[#521414]  pt-20 pb-10">
       <div
         className="absolute top-0 left-0 w-full h-full opacity-30 z-0"
         style={{
