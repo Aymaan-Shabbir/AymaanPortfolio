@@ -5,10 +5,7 @@ import techGif from "../assets/tech-gif2.gif";
 
 export default function Hero() {
   return (
-    <div
-      className="relative h-[60%] flex flex-col items-center justify-center text-center bg: rgb(2,0,36)
-background: linear-gradient(90deg, rgba(2,0,36,1) 1%, rgba(170,5,5,1) 83%, rgba(243,213,69,1) 100%); text-white z-10 flex-wrap"
-    >
+    <div className="relative h-[60%] flex flex-col items-center justify-center text-center  text-white z-10 flex-wrap">
       <motion.img
         src={techGif}
         alt="Tech Animation"
@@ -30,7 +27,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 1%, rgba(170,5,5,1) 83%, rgba(
 
       {/* Name section*/}
       <motion.h1
-        className="font-avengers text-5xl font-bold text-[#6e6e5c] mt-3 drop-shadow-[4px_4px_0px_#000] group z-20"
+        className="font-avengers text-5xl font-bold text-[#F3D545] mt-3 drop-shadow-[4px_4px_0px_#000] group z-20"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -50,7 +47,7 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 1%, rgba(170,5,5,1) 83%, rgba(
       </motion.h1>
 
       <motion.p
-        className="text-lg text-gray-300  max-w-2xl z-20 my-4 aPARA mx-2"
+        className="text-lg font-bold text-gray-300  max-w-2xl z-20 my-4 aPARA mx-2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 1 }}

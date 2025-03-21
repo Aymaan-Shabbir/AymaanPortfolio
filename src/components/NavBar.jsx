@@ -70,7 +70,7 @@ function NavBar() {
                 to={section}
                 smooth={true}
                 duration={500}
-                className="navSM block py-3 w-full text-center text-lg hover:bg-[#aa0505] hover:text-[#F3D545] transition-all"
+                className="navSM block py-3 w-full text-center text-lg hover:bg-[#bb2b2b] hover:text-[#F3D545] transition-all"
                 onClick={() => setIsOpen(false)}
               >
                 {section.charAt(0).toUpperCase() + section.slice(1)}.
