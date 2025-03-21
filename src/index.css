@@ -1,7 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&family=Zen+Dots&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
 @import "tailwindcss";
+@font-face {
+  font-family: "Avengers";
+  src: url("./Avengers.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
+.font-avengers {
+  font-family: "Avengers", "Zen Dots";
+  letter-spacing: 2px;
+}
 #root,
 html,
 body {

@@ -3,9 +3,12 @@ import { motion } from "framer-motion";
 import aymaan from "../assets/aymaan.jpeg";
 import techGif from "../assets/tech-gif2.gif";
 
-function Hero() {
+export default function Hero() {
   return (
-    <div className="relative h-[60%] flex flex-col items-center justify-center text-center bg-[#aa0505] text-white z-10 flex-wrap">
+    <div
+      className="relative h-[60%] flex flex-col items-center justify-center text-center bg: rgb(2,0,36)
+background: linear-gradient(90deg, rgba(2,0,36,1) 1%, rgba(170,5,5,1) 83%, rgba(243,213,69,1) 100%); text-white z-10 flex-wrap"
+    >
       <motion.img
         src={techGif}
         alt="Tech Animation"
@@ -27,10 +30,7 @@ function Hero() {
 
       {/* Name section*/}
       <motion.h1
-        className="text-5xl font-bold text-[#F3D545] mt-3 drop-shadow-[4px_4px_0px_#000] group z-20"
-        style={{
-          fontFamily: "'Zen Dots', sans-serif",
-        }}
+        className="font-avengers text-6xl font-bold text-[#6e6e5c] mt-3 drop-shadow-[4px_4px_0px_#000] group z-20"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -107,5 +107,3 @@ function Hero() {
     </div>
   );
 }
-
-export default Hero;
