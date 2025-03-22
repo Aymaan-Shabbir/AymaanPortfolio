@@ -55,24 +55,26 @@ function Works() {
       className="w-full min-h-screen flex flex-col items-center py-20 px-5 md:px-10 transition-colors duration-500"
     >
       <div className="max-w-4xl w-full relative">
-        
+        <h1 className="projName text-3xl text-center m-4 text-yellow-400">
+          -Work Timeline-
+        </h1>
+
         <div className="absolute top-0 left-5 md:left-10 w-1 h-full bg-gray-600 block"></div>
 
         {worksData.map((work, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: -150 }} 
-            whileInView={{ opacity: 1, x: 0 }} 
-            viewport={{ amount: 0.2 }} 
+            initial={{ opacity: 0, x: -150 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ amount: 0.2 }}
             transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
             className="relative flex flex-col md:flex-row items-start mb-12"
           >
-           
             <motion.div
               className="absolute left-5 md:left-10 top-5 w-4 h-4 bg-yellow-400 rounded-full border border-white shadow-md block"
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
-              viewport={{ amount: 0.2 }} 
+              viewport={{ amount: 0.2 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             />
 
@@ -81,7 +83,6 @@ function Works() {
               whileHover={{ scale: 1.02 }}
               className="w-full md:w-3/4 ml-auto relative p-6 rounded-lg shadow-lg border border-gray-700 backdrop-blur-lg bg-white/10 text-white transition-all duration-300 hover:bg-white/20 overflow-hidden"
             >
-            
               <motion.div
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0"
                 animate={{ x: ["-100%", "100%"] }}
@@ -92,7 +93,6 @@ function Works() {
                 }}
               />
 
-             
               <div className="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-lg"></div>
 
               {/* Content */}
