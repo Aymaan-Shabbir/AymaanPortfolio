@@ -208,7 +208,7 @@ function Projects() {
       </button>
 
       {showExperimental && (
-        <div className="projCard mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
+        <div className="projCard mt-6 mx-3 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
           {experimentalProjects.map((project, index) => (
             <motion.div
               key={index}
