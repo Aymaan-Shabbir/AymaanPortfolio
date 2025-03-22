@@ -27,6 +27,12 @@ ul > li {
       15 15,
     auto;
 }
+ul > li > a {
+  font-family: "Zen Dots", sans-serif;
+  cursor: url("https://img.icons8.com/?size=30&id=TcPxEIKHdr0o&format=png&color=000000")
+      15 15,
+    auto;
+}
 .aIMG {
   cursor: url("https://img.icons8.com/?size=30&id=TcPxEIKHdr0o&format=png&color=000000")
       15 15,
