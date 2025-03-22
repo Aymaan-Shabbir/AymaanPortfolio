@@ -84,7 +84,7 @@ function Skills() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setTimeout(() => setColorTheme("#bb2b2b"), 500);
+          setTimeout(() => setColorTheme("#521414"), 500);
         } else {
           setColorTheme("#F3D545");
         }
@@ -114,7 +114,7 @@ function Skills() {
       className="w-full min-h-screen py-15 flex flex-col items-center transition-all duration-[1000ms]"
       style={{
         backgroundColor: colorTheme,
-        color: colorTheme === "#F3D545" ? "#bb2b2b" : "#F3D545",
+        color: colorTheme === "#F3D545" ? "#521414" : "#F3D545",
       }}
     >
       {/* Skills Grid */}

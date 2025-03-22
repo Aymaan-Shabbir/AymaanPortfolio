@@ -130,7 +130,7 @@ function Projects() {
       id="projects"
       ref={ref}
       className="w-full min-h-screen pt-25 pb-15 flex flex-col items-center transition-colors duration-1000 text-white"
-      style={{ backgroundColor: isInView ? "#bb2b2b" : "#F3D545" }}
+      style={{ backgroundColor: isInView ? "#521414" : "#F3D545" }}
     >
       <motion.h2
         className="text-2xl font-bold mb-5 animHead text-[#F3D545] text-center"
@@ -197,7 +197,7 @@ function Projects() {
 
       <button
         onClick={() => setShowExperimental(!showExperimental)}
-        className="boast mt-6 px-6 py-3 bg-[#F3D545] text-red-700 rounded-lg text-md font-semibold hover:bg-red-700 hover:text-[#F3D545] transition-all"
+        className="boast mt-6 mx-4 px-6 py-3 bg-[#F3D545] text-[#521414] rounded-lg text-md font-semibold hover:bg-[#611430] hover:text-[#F3D545] transition-all"
       >
         {showExperimental
           ? "Stop boasting.."
