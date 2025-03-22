@@ -97,20 +97,20 @@ function Works() {
 
               {/* Content */}
               <div className="relative z-10">
-                <h3 className="text-xl font-bold text-yellow-400 transition-colors duration-300 hover:text-white">
+                <h3 className="projName text-xl font-bold text-yellow-400 transition-colors duration-300 hover:text-white">
                   {work.title}
                 </h3>
-                <h4 className="text-lg font-bold text-yellow-500 transition-colors duration-300 hover:text-gray-100">
+                <h4 className="boast text-lg font-bold text-yellow-500 transition-colors duration-300 hover:text-gray-100">
                   {work.company}
                 </h4>
-                <p className="text-sm text-gray-800 semibold">
+                <p className="boast text-sm text-gray-800 font-semibold">
                   {work.duration} - {work.location}
                 </p>
-                <p className="mt-2 text-gray-800 font-semibold transition-colors duration-300 hover:text-gray-200">
+                <p className=" boast mt-2 text-gray-800 font-semibold transition-colors duration-300 hover:text-gray-200">
                   {work.description}
                 </p>
                 {work.technologies && (
-                  <div className="mt-3 flex flex-wrap gap-2">
+                  <div className="mt-3 flex flex-wrap gap-2 boast font-semibold">
                     {work.technologies.map((tech, idx) => (
                       <motion.span
                         key={idx}

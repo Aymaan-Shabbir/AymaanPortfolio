@@ -15,12 +15,23 @@ function Contact() {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="w-full min-h-screen flex flex-col items-center py-20 px-5 md:px-10 transition-colors duration-500"
     >
-      <div className="max-w-2xl w-full">
+      <div className="max-w-2xl w-full relative">
+        {/* GIF Background Layer */}
+        <motion.img
+          src="./assets/"
+          alt="Background Animation"
+          className="absolute inset-0 w-full h-full object-cover opacity-40 -z-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.4 }}
+          transition={{ duration: 1 }}
+        />
+
+        {/* Contact Heading */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-10"
+          className="text-center mb-10 relative"
         >
           <h2 className="projName text-3xl font-bold text-yellow-400">
             Contact Me
@@ -30,16 +41,17 @@ function Contact() {
           </p>
         </motion.div>
 
+        {/* Contact Form */}
         <motion.form
           action="https://getform.io/f/bgdpqvka"
           method="POST"
-          className="w-full p-6 rounded-lg shadow-lg border border-gray-700 backdrop-blur-lg bg-white/10 text-white transition-all duration-300 hover:bg-white/20"
+          className="w-full p-6 rounded-lg shadow-lg border border-gray-700 backdrop-blur-lg bg-white/20 text-white transition-all duration-300 hover:bg-white/30 relative"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="mb-4">
-            <label className=" boast block text-yellow-400">Name</label>
+            <label className="boast block text-yellow-400">Name</label>
             <input
               type="text"
               name="name"
