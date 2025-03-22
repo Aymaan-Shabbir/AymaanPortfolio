@@ -130,7 +130,7 @@ function Projects() {
       id="projects"
       ref={ref}
       className="w-full min-h-screen pt-25 pb-15 flex flex-col items-center transition-colors duration-1000 text-white"
-      style={{ backgroundColor: isInView ? "#521414" : "#F3D545" }}
+      style={{ backgroundColor: isInView ? "#521414" : "#290A0A" }}
     >
       <motion.h2
         className="text-2xl font-bold mb-5 animHead text-[#F3D545] text-center"

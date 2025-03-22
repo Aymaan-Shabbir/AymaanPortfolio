@@ -75,7 +75,7 @@ const quotes = [
 
 function Skills() {
   const [quoteIndex, setQuoteIndex] = useState(0);
-  const [colorTheme, setColorTheme] = useState("#F3D545");
+  const [colorTheme, setColorTheme] = useState("#521414");
   const skillsRef = useRef(null);
 
   useEffect(() => {
@@ -86,7 +86,7 @@ function Skills() {
         if (entry.isIntersecting) {
           setTimeout(() => setColorTheme("#521414"), 500);
         } else {
-          setColorTheme("#F3D545");
+          setColorTheme("#290A0A");
         }
       },
       { threshold: 0.1 }
@@ -114,7 +114,7 @@ function Skills() {
       className="w-full min-h-screen py-15 flex flex-col items-center transition-all duration-[1000ms]"
       style={{
         backgroundColor: colorTheme,
-        color: colorTheme === "#F3D545" ? "#521414" : "#F3D545",
+        color: colorTheme === "#F3D545" ? "#290A0A" : "#F3D545",
       }}
     >
       {/* Skills Grid */}

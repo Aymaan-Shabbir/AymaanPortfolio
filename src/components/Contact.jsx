@@ -11,7 +11,7 @@ function Contact() {
     <motion.div
       id="contact"
       ref={ref}
-      animate={{ backgroundColor: isInView ? "#521414" : "#F3D545" }}
+      animate={{ backgroundColor: isInView ? "#521414" : "#290A0A" }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="w-full min-h-screen flex flex-col items-center py-20 px-5 md:px-10 transition-colors duration-500"
     >
