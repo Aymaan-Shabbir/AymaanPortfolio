@@ -13,6 +13,7 @@ import {
   SiHtml5,
   SiCss3,
 } from "react-icons/si";
+import bWiz from "../assets/bWizmockup.jpg";
 
 const techLogos = {
   "Next.js": <SiNextdotjs className="text-white" />,
@@ -40,8 +41,9 @@ const projects = [
     ],
     github: "https://github.com/Aymaan-Shabbir/KolRoam-2",
     website: "https://kolroam.vercel.app",
-    image: "/kolroam.png",
+    image: "https://i.ibb.co/DfmYZ8Dh/klm.jpg",
   },
+
   {
     title: "KalkatiaLang",
     description:
@@ -49,7 +51,16 @@ const projects = [
     techStack: ["React", "TypeScript", "Tailwind CSS"],
     github: "https://github.com/Aymaan-Shabbir/KalkatiaLang",
     website: "https://kalkatialang.netlify.app",
-    image: "/blogwiz.png",
+    image: "https://i.ibb.co/3y3S1JrF/k-Lang-2.jpg",
+  },
+
+  {
+    title: "Playlist Predator",
+    description: "Another tool which calculates youtube playlist durations.",
+    techStack: ["React", "Algorithms", "Tailwind CSS", "JavaScript"],
+    github: "https://github.com/Aymaan-Shabbir/Playlist-Predator",
+    website: "https://ppredator.netlify.app/",
+    image: "https://i.ibb.co/VpLKhpdL/ago.jpg",
   },
   {
     title: "BlogWiz",
@@ -57,15 +68,7 @@ const projects = [
     techStack: ["React", "Appwrite", "Tailwind CSS", "JavaScript"],
     github: "https://github.com/Aymaan-Shabbir/BlogWiz",
     website: "https://blogwiz-asi.netlify.app/",
-    image: "/blogwiz.png",
-  },
-  {
-    title: "Playlist Predator",
-    description: "Another tool which calculates youtube playlist durations",
-    techStack: ["React", "Algorithms", "Tailwind CSS", "JavaScript"],
-    github: "https://github.com/Aymaan-Shabbir/Playlist-Predator",
-    website: "https://ppredator.netlify.app/",
-    image: "/blogwiz.png",
+    image: "https://i.ibb.co/ccBGVmjh/blz.jpg",
   },
 ];
 
@@ -74,7 +77,7 @@ const experimentalProjects = [
     title: "FYLE",
     description: "A landing page for FYLE.",
     techStack: ["HTML", "CSS", "JavaScript"],
-    image: "/aichatbot.png",
+    image: "https://i.ibb.co/kVdRVZdv/Screenshot-2025-03-23-040119.png",
     website: "https://fylelanding.netlify.app/",
     github: "https://github.com/Aymaan-Shabbir/FYLE_LANDING",
   },
@@ -82,15 +85,15 @@ const experimentalProjects = [
     title: "Chorus",
     description: "A landing page for a music school.",
     techStack: ["Next.js", "Tailwind", "TypeScript"],
-    image: "/cryptotracker.png",
+    image: "https://i.ibb.co/20Gj5rf2/Screenshot-2025-03-23-040313.png",
     website: "http://chorus-asi.netlify.app/",
     github: "https://github.com/Aymaan-Shabbir/Chorus",
   },
   {
     title: "Dharamtalla",
-    description: "Esplanade in a nutshell",
+    description: "Esplanade in a nutshell.",
     techStack: ["React.js", "JavaScript", "Tailwind"],
-    image: "/cryptotracker.png",
+    image: "https://i.ibb.co/bjQBKN52/Screenshot-2025-03-23-040336.png",
     website: "https://dharamtalla.netlify.app/",
     github: "https://github.com/Aymaan-Shabbir/Dharamtallaa",
   },
@@ -98,7 +101,7 @@ const experimentalProjects = [
     title: "TaskEngine",
     description: "Just another toDo app.",
     techStack: ["React.js", "JavaScript", "Tailwind"],
-    image: "/cryptotracker.png",
+    image: "https://i.ibb.co/8nVJcwpY/Screenshot-2025-03-23-040350.png",
     website: "https://todoo-asi.netlify.app/",
     github: "https://github.com/Aymaan-Shabbir/toDoo",
   },
@@ -106,7 +109,7 @@ const experimentalProjects = [
     title: "CurseXchange",
     description: "Just another currency-converter app.",
     techStack: ["React.js", "JavaScript", "Tailwind"],
-    image: "/cryptotracker.png",
+    image: "https://i.ibb.co/RTgJ9Jm8/Screenshot-2025-03-23-040419.png",
     website: "https://cursexchange.netlify.app/",
     github: "https://github.com/Aymaan-Shabbir/currency-converter",
   },
@@ -114,7 +117,7 @@ const experimentalProjects = [
     title: "HexaKey",
     description: "Just another password generator app.",
     techStack: ["React.js", "JavaScript", "Tailwind"],
-    image: "/cryptotracker.png",
+    image: "https://i.ibb.co/gLq2bytN/Screenshot-2025-03-23-040502.png",
     github: "https://github.com/Aymaan-Shabbir/pwgen",
   },
 ];
@@ -154,11 +157,11 @@ function Projects() {
             }}
             transition={{ type: "spring", stiffness: 200 }}
           >
-            <div className=" h-24 md:h-32 w-full bg-gray-700 rounded-lg overflow-hidden">
+            <div className="h-30 md:h-32 w-full bg-gray-700 rounded-lg overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover "
               />
             </div>
             <h3 className="projName text-3xl sm:text-xl font-semibold mt-2 text-[#F3D545]">
@@ -222,7 +225,7 @@ function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-contain"
                 />
               </div>
               <h3 className="projName text-3xl sm:text-xl font-semibold mt-4 text-[#F3D545]">
