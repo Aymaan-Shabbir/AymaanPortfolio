@@ -66,7 +66,7 @@ function Works() {
       className="w-full min-h-screen flex flex-col items-center py-20 px-5 md:px-10 transition-colors duration-500"
     >
       <div className="max-w-4xl w-full relative">
-        <h1 className="projName text-3xl text-center m-4 text-yellow-400">
+        <h1 className="projName text-3xl text-center mb-10 mt-4 text-yellow-400">
           -Work Timeline-
         </h1>
 
