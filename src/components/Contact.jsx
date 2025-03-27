@@ -33,7 +33,7 @@ function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center mb-10 relative"
         >
-          <h2 className="projName text-3xl font-bold text-yellow-400">
+          <h2 className="projName text-3xl font-bold text-yellow-400 my-4">
             Contact Me
           </h2>
           <p className="boast text-yellow-300 font-semibold">
