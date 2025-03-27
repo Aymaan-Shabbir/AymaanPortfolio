@@ -5,11 +5,19 @@ import { motion, useInView } from "framer-motion";
 
 const worksData = [
   {
+    title: "GT Engineer.",
+    company: "LTI Mindtree.",
+    duration: "Mar 2025 - Present",
+    image: "https://i.ibb.co/271Y9GVM/lti.jpg",
+    location: "Hybrid",
+    technologies: ["Software Development"],
+  },
+  {
     title: "Deep Learning Intern.",
     company: "Ardent Computech",
     duration: "Jan 2024 - Mar 2024",
-    description:
-      "Worked on designing and developing CNN algorithms for different fields.",
+    image: "https://i.ibb.co/20skKJGQ/Ardent.jpg",
+    description: "Worked on designing and developing CNN algorithms.",
     location: "Kolkata",
     technologies: ["Python", "TensorFlow", "Keras"],
   },
@@ -17,6 +25,7 @@ const worksData = [
     title: "Mentor - Technical Head.",
     company: "Xplorica",
     duration: "Aug 2024 - Present",
+    image: "https://i.ibb.co/5hD0D9Xw/xplorica.png",
     description:
       "Guided students in technical projects and mentored them in various domains.",
     location: "FIEM, Kolkata",
@@ -26,17 +35,19 @@ const worksData = [
     title: "Core Committee - Technical Head.",
     company: "Xplorica",
     duration: "Aug 2023 - July 2024",
+    image: "https://i.ibb.co/5hD0D9Xw/xplorica.png",
     description:
-      "Managed technical teams and developed the annual fest website.",
+      "Managed technical teams, gave Web Development workshops and developed the annual fest website.",
     location: "FIEM, Kolkata",
-    technologies: ["Team Coordination", "Technical Planning"],
+    technologies: ["Dev Bootcamps", "Team Coordination", "Technical Planning"],
   },
   {
     title: "Coordinator.",
     company: "Xplorica",
     duration: "March 2023 - July 2023",
+    image: "https://i.ibb.co/5hD0D9Xw/xplorica.png",
     description:
-      "Managed technical events and workshops, ensuring smooth execution.",
+      "Managed technical events and coordinated the annual tech fest.",
     location: "FIEM, Kolkata",
     technologies: ["Event Management", "Leadership"],
   },
@@ -70,13 +81,7 @@ function Works() {
             transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
             className="relative flex flex-col md:flex-row items-start mb-12"
           >
-            <motion.div
-              className="absolute left-5 md:left-10 top-5 w-4 h-4 bg-yellow-400 rounded-full border border-white shadow-md block"
-              initial={{ scale: 0 }}
-              whileInView={{ scale: 1 }}
-              viewport={{ amount: 0.2 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-            />
+            <motion.div className="absolute left-[3px] md:left-[32px] top-1/2 -translate-y-1/2 w-5 h-5 bg-yellow-400 rounded-full border-2 border-white shadow-md" />
 
             {/* Content Box */}
             <motion.div
@@ -97,6 +102,11 @@ function Works() {
 
               {/* Content */}
               <div className="relative z-10">
+                <img
+                  src={work.image}
+                  alt=""
+                  className="h-30 w-60 object-contain m-2 p-1"
+                />
                 <h3 className="projName text-xl font-bold text-yellow-400 transition-colors duration-300 hover:text-white">
                   {work.title}
                 </h3>
