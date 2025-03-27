@@ -176,6 +176,13 @@ function Skills() {
           Jarvis?
         </button>
       </div>
+      <div className="flex justify-center mt-5">
+        <img
+          src="https://leetcard.jacoblin.cool/AymaanShabbir?theme=forest&font=Kanit&ext=heatmap"
+          alt="LeetCode Stats
+          className=w-full max-w-[500px] h-auto"
+        />
+      </div>
     </div>
   );
 }
