@@ -176,7 +176,7 @@ function Skills() {
           Jarvis?
         </button>
       </div>
-      <div className="flex justify-center mt-5">
+      <div className="flex justify-center mt-5 mx-5">
         <img
           src="https://leetcard.jacoblin.cool/AymaanShabbir?theme=forest&font=Kanit&ext=heatmap"
           alt="LeetCode Stats
