@@ -8,7 +8,7 @@ const NavBar = () => {
   const resumeLink =
     "https://drive.google.com/file/d/1-SfVxu-v-_uRh2UmJXNFwNSbhutlMyLB/view?usp=drivesdk";
 
-  const menuItems = ["Skills", "Works", "Projects", "Resources", "Contact"];
+  const menuItems = ["Skills", "Projects", "Works", "Contact"];
 
   return (
     <nav className="fixed top-5 right-5 z-50">
