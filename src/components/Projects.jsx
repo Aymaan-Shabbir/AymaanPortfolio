@@ -1,5 +1,6 @@
+"use client";
 import React, { useState } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -13,7 +14,6 @@ import {
   SiHtml5,
   SiCss3,
 } from "react-icons/si";
-import bWiz from "../assets/bWizmockup.jpg";
 
 const techLogos = {
   "Next.js": <SiNextdotjs className="text-white" />,
@@ -125,18 +125,14 @@ const experimentalProjects = [
 function Projects() {
   const [showExperimental, setShowExperimental] = useState(false);
 
-  const ref = React.useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-50px" });
-
   return (
     <div
       id="projects"
-      ref={ref}
-      className="w-full min-h-screen pt-25 pb-15 flex flex-col items-center transition-colors duration-1000 text-white"
-      style={{ backgroundColor: isInView ? "#521414" : "#290A0A" }}
+      className="w-full min-h-screen pt-24 pb-16 flex flex-col items-center text-white bg-cover bg-center"
+      style={{ backgroundImage: 'url("/theogbg.jpg")' }}
     >
       <motion.h2
-        className="text-2xl font-bold mb-5 animHead text-[#F3D545] text-center"
+        className="name text-2xl font-bold mb-5 text-red-800 text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -144,11 +140,11 @@ function Projects() {
         Production Level Applications.
       </motion.h2>
 
-      <div className="projCard grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl p-3 m-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl px-3">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="bg-[#1e1e1e] py-3 px-3 rounded-lg shadow-md transition-transform hover:scale-105"
+            className="bg-[#1e1e1e] p-4 rounded-lg shadow-md hover:scale-105 transition-transform"
             whileHover={{
               scale: 1.01,
               rotate: 1.3,
@@ -157,20 +153,18 @@ function Projects() {
             }}
             transition={{ type: "spring", stiffness: 200 }}
           >
-            <div className="h-30 md:h-32 w-full bg-gray-700 rounded-lg overflow-hidden">
+            <div className="h-40 w-full bg-gray-700 rounded-lg overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="h-full w-full object-cover "
+                className="h-full w-full object-cover"
               />
             </div>
-            <h3 className="projName text-3xl sm:text-xl font-semibold mt-2 text-[#F3D545]">
+            <h3 className="text-xl font-semibold mt-3 text-[#F3D545]">
               {project.title}
             </h3>
-            <p className="projP text-white text-sm mb-1">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-1 mb-3">
+            <p className="text-white text-sm mb-2">{project.description}</p>
+            <div className="flex flex-wrap gap-2 mb-3">
               {project.techStack.map((tech, i) => (
                 <span
                   key={i}
@@ -200,19 +194,19 @@ function Projects() {
 
       <button
         onClick={() => setShowExperimental(!showExperimental)}
-        className="boast mt-6 mx-4 px-6 py-3 bg-[#F3D545] text-[#521414] rounded-lg text-md font-semibold hover:bg-[#611430] hover:text-[#F3D545] transition-all"
+        className="aProf mt-10 px-6 py-3 bg-[#F3D545] text-[#521414] rounded-lg text-md font-semibold hover:bg-[#611430] hover:text-[#F3D545] transition-all"
       >
         {showExperimental
           ? "Stop boasting.."
-          : "Tired? click to see some projects which i developed when i got bored.."}
+          : "Tired? click to see some projects which I developed when I got bored.."}
       </button>
 
       {showExperimental && (
-        <div className="projCard mt-6 mx-3 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl">
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl px-3">
           {experimentalProjects.map((project, index) => (
             <motion.div
               key={index}
-              className="bg-[#1e1e1e] py-3 px-3 rounded-lg shadow-md transition-transform hover:scale-105"
+              className="bg-[#1e1e1e] p-4 rounded-lg shadow-md hover:scale-105 transition-transform"
               whileHover={{
                 scale: 1.01,
                 rotate: 1.3,
@@ -221,46 +215,40 @@ function Projects() {
               }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <div className="h-36 md:h-48 w-full bg-gray-700 rounded-lg overflow-hidden">
+              <div className="h-36 w-full bg-gray-700 rounded-lg overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="h-full w-full object-contain"
                 />
               </div>
-              <h3 className="projName text-3xl sm:text-xl font-semibold mt-4 text-[#F3D545]">
+              <h3 className="text-xl font-semibold mt-3 text-[#F3D545]">
                 {project.title}
               </h3>
-              <p className="projP text-[#F3D545]-400 mb-2">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mb-2">
+              <p className="text-white text-sm mb-2">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-3">
                 {project.techStack.map((tech, i) => (
                   <span
                     key={i}
-                    className="flex items-center gap-1 px-2 py-1 bg-gray-700 rounded text-sm"
+                    className="flex items-center gap-1 px-2 py-1 bg-gray-700 rounded text-xs"
                   >
                     {techLogos[tech] || null} {tech}
                   </span>
                 ))}
               </div>
-              <div className="flex  mt-4 gap-3 justify-center">
+              <div className="flex gap-3 items-center justify-center">
                 {project.github && (
                   <a
                     href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="flex items-center gap-2 px-2 py-1 bg-gray-700 rounded-lg hover:bg-gray-600 text-sm"
                   >
-                    <FaGithub /> Github
+                    <FaGithub /> GitHub
                   </a>
                 )}
                 {project.website && (
                   <a
                     href={project.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center px-2 py-1 gap-2 bg-blue-600 text-white rounded-lg text-sm  hover:bg-blue-500 transition"
+                    className="flex items-center gap-2 px-2 py-1 bg-blue-600 rounded-lg hover:bg-blue-500 text-sm"
                   >
                     <FaExternalLinkAlt /> Live
                   </a>
@@ -268,9 +256,6 @@ function Projects() {
               </div>
             </motion.div>
           ))}
-          <h2 className="text-center m-auto italic text-[#F3D545] text-lg">
-            "These are just some Front-End exercises."
-          </h2>
         </div>
       )}
     </div>

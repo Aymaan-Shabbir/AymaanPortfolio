@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import {
   FaReact,
@@ -77,40 +77,20 @@ const skillsData = [
 ];
 
 const quotes = [
-  "The lesson is that you can still make mistakes and be forgiven.",
-  "Worrying is like praying for something that you don’t want to happen.",
-  "Listen, smile, agree, and then do whatever you were gonna do anyway.",
+  "It’s not what happens to you, but how you react to it that matters.",
+  "You have power over your mind — not outside events. Realize this, and you will find strength.",
+  "We suffer more often in imagination than in reality.",
+  "First say to yourself what you would be; and then do what you have to do.",
+  "Man conquers the world by conquering himself.",
+  "Lead me, Zeus, and you, Fate, wherever you have assigned me. I will follow without hesitation.",
+  "No man is free who is not master of himself.",
+  "Everything we hear is an opinion, not a fact. Everything we see is a perspective, not the truth.",
+  "We are disturbed not by things, but by the views which we take of them.",
+  "Happiness is a good flow of life.",
 ];
 
 function Skills() {
   const [quoteIndex, setQuoteIndex] = useState(0);
-  const [colorTheme, setColorTheme] = useState("#521414");
-  const skillsRef = useRef(null);
-
-  useEffect(() => {
-    const element = skillsRef.current;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => setColorTheme("#521414"), 500);
-        } else {
-          setColorTheme("#290A0A");
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
-  }, []);
 
   const handleNextQuote = () => {
     setQuoteIndex((prevIndex) => (prevIndex + 1) % quotes.length);
@@ -118,12 +98,14 @@ function Skills() {
 
   return (
     <div
-      ref={skillsRef}
       id="skills"
-      className="w-full min-h-screen py-15 flex flex-col items-center transition-all duration-[1000ms]"
+      className="w-full min-h-screen py-15 flex flex-col items-center text-[#F3D545]"
       style={{
-        backgroundColor: colorTheme,
-        color: colorTheme === "#F3D545" ? "#290A0A" : "#F3D545",
+        backgroundImage: `url('/theogbg.jpg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundBlendMode: "overlay",
       }}
     >
       {/* Skills Grid */}
@@ -164,7 +146,7 @@ function Skills() {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "100vw", opacity: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="text-base sm:text-sm xs:text-xs italic text-center px-4 max-w-xs sm:max-w-sm leading-relaxed"
+          className="text-base sm:text-sm xs:text-xs italic text-center px-4 max-w-xs sm:max-w-sm leading-relaxed text-red-800"
         >
           {`“${quotes[quoteIndex]}”`}
         </motion.p>
@@ -173,14 +155,16 @@ function Skills() {
           onClick={handleNextQuote}
           className="quoteBTN mt-4 px-4 py-2 bg-[#FFD65A] text-[#aa0505] rounded-lg font-semibold hover:bg-[#aa0505] hover:text-[#F3D545] transition"
         >
-          Jarvis?
+          Epictetus?
         </button>
       </div>
+
+      {/* LeetCode Stats */}
       <div className="flex justify-center mt-5 mx-5">
         <img
           src="https://leetcard.jacoblin.cool/AymaanShabbir?theme=forest&font=Kanit&ext=heatmap"
-          alt="LeetCode Stats
-          className=w-full max-w-[500px] h-auto"
+          alt="LeetCode Stats"
+          className="w-full max-w-[500px] h-auto"
         />
       </div>
     </div>

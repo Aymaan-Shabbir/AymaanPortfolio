@@ -1,99 +1,81 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
-function NavBar() {
+const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
   const resumeLink =
     "https://drive.google.com/file/d/1-SfVxu-v-_uRh2UmJXNFwNSbhutlMyLB/view?usp=drivesdk";
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  // Close menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-
-    if (isOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isOpen]);
+  const menuItems = ["Skills", "Works", "Projects", "Resources", "Contact"];
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-20 flex flex-col items-center">
-      <div className="w-[90vw] md:w-[60vw] h-[10vh] flex items-center justify-between mt-5 px-5 rounded-lg bg-transparent">
-        {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center justify-between text-[#F3D545] gap-10 text-3xl md:gap-5 md:text-2xl sm:gap-3 sm:text-sm">
-          {["skills", "projects", "works", "contact"].map((section) => (
-            <li
-              key={section}
-              className="hover:bg-[#F3D545] hover:text-[#aa0505] p-3 rounded-lg drop-shadow-[2px_2px_0px_#000] transition-all"
-            >
-              <Link to={section} smooth={true} duration={500}>
-                {section.charAt(0).toUpperCase() + section.slice(1)}.
-              </Link>
-            </li>
-          ))}
-          {/* Resume Button */}
-          <li className="hover:bg-[#F3D545] hover:text-[#aa0505] p-3 rounded-lg drop-shadow-[2px_2px_0px_#000] transition-all">
-            <a href={resumeLink} target="_blank" rel="noopener noreferrer">
-              Resume.
-            </a>
-          </li>
-        </ul>
+    <nav className="fixed top-5 right-5 z-50">
+      {/* Circular Menu Button */}
+      <motion.button
+        animate={{ rotate: isOpen ? 90 : 0 }}
+        transition={{ duration: 0.3 }}
+        className={`cursor-pointer w-16 h-16 flex items-center justify-center rounded-full border-4 border-[#9D9773] bg-black bg-opacity-60 backdrop-blur-md shadow-lg shadow-[#9D9773]`}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        {isOpen ? (
+          <FaTimes className="text-[#9D9773] text-3xl" />
+        ) : (
+          <FaBars className="text-[#9D9773] text-3xl" />
+        )}
+      </motion.button>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-[#F3D545] text-2xl focus:outline-none"
-          onClick={toggleMenu}
-        >
-          {isOpen ? <FaTimes /> : <FaBars />}
-        </button>
-      </div>
-
-      {/* Mobile Navigation Menu */}
-      {isOpen && (
-        <div
-          ref={menuRef}
-          className="md:hidden flex flex-col items-center bg-[#F3D545] text-[#aa0505] absolute w-full left-0 mt-2 py-5 rounded-lg shadow-lg"
-        >
-          {["skills", "projects", "works", "contact"].map((section) => (
-            <Link
-              key={section}
-              to={section}
-              smooth={true}
-              duration={500}
-              className="navSM block py-3 w-full text-center text-lg hover:bg-[#521414] hover:text-[#F3D545] transition-all"
-              onClick={() => setIsOpen(false)}
-            >
-              {section.charAt(0).toUpperCase() + section.slice(1)}.
-            </Link>
-          ))}
-          {/* Resume Button in Mobile Menu */}
-          <a
-            href={resumeLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="navSM block py-3 w-full text-center text-lg hover:bg-[#521414] hover:text-[#F3D545] transition-all"
+      {/* Expanding Menu */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ scale: 0, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            className="fixed top-10 right-10 w-56 h-56 bg-[#9D9773] bg-opacity-90 backdrop-blur-2xl rounded-full flex flex-col items-center justify-center shadow-xl shadow-[#9D9773]"
           >
-            Resume.
-          </a>
-        </div>
-      )}
+            {menuItems.map((section, index) => (
+              <motion.div
+                key={section}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 * index }}
+              >
+                <Link
+                  to={section.toLowerCase()}
+                  smooth={true}
+                  duration={500}
+                  className="cursor-pointer aProf text-white text-md font-semibold uppercase tracking-wider hover:text-black transition-all transform hover:scale-110 my-1"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {section}
+                </Link>
+              </motion.div>
+            ))}
+
+            {/* Resume Button */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 * menuItems.length }}
+            >
+              <a
+                href={resumeLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cursor-pointer aProf text-white text-md font-semibold uppercase tracking-wider hover:text-black transition-all transform hover:scale-110 my-1"
+                onClick={() => setIsOpen(false)}
+              >
+                Resume
+              </a>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
-}
+};
 
 export default NavBar;

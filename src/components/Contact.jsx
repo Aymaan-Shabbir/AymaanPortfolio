@@ -5,27 +5,15 @@ import { motion, useInView } from "framer-motion";
 
 function Contact() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-10% 0px" });
 
   return (
-    <motion.div
+    <div
       id="contact"
       ref={ref}
-      animate={{ backgroundColor: isInView ? "#521414" : "#290A0A" }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="w-full min-h-screen flex flex-col items-center py-20 px-5 md:px-10 transition-colors duration-500"
+      className="w-full min-h-screen flex flex-col items-center py-20 px-5 md:px-10 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('/theogbg.jpg')" }}
     >
       <div className="max-w-2xl w-full relative">
-        {/* GIF Background Layer */}
-        <motion.img
-          src="./assets/"
-          alt="Background Animation"
-          className="absolute inset-0 w-full h-full object-cover opacity-40 -z-10"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 0.4 }}
-          transition={{ duration: 1 }}
-        />
-
         {/* Contact Heading */}
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -33,10 +21,10 @@ function Contact() {
           transition={{ duration: 0.5 }}
           className="text-center mb-10 relative"
         >
-          <h2 className="projName text-3xl font-bold text-yellow-400 my-4">
+          <h2 className="name text-3xl font-bold text-red-800 my-4">
             Contact Me
           </h2>
-          <p className="boast text-yellow-300 font-semibold">
+          <p className="aProf text-red-800 font-semibold">
             Fill out the form below to get in touch!
           </p>
         </motion.div>
@@ -51,33 +39,33 @@ function Contact() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="mb-4">
-            <label className="boast block text-yellow-400">Name</label>
+            <label className="aProf block text-red-800">Name</label>
             <input
               type="text"
               name="name"
               required
-              className="w-full p-3 bg-[#521414] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-yellow-400"
+              className="w-full p-3 bg-[#B3AD87] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-yellow-400"
             />
           </div>
 
           <div className="mb-4">
-            <label className="boast block text-yellow-400">Email</label>
+            <label className="aProf block text-red-800">Email</label>
             <input
               type="email"
               name="email"
               required
-              className="w-full p-3 bg-[#521414] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-yellow-400"
+              className="w-full p-3 bg-[#B3AD87] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-yellow-400"
             />
           </div>
 
           <div className="mb-4">
-            <label className="boast block text-yellow-400">Message</label>
-            <input
-              type="text"
+            <label className="aProf block text-red-800">Message</label>
+            <textarea
               name="message"
+              rows="4"
               required
-              className="w-full p-3 bg-[#521414] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-yellow-400"
-            />
+              className="w-full p-3 bg-[#B3AD87] text-white rounded-lg border border-gray-600 focus:outline-none focus:border-yellow-400"
+            ></textarea>
           </div>
 
           <input type="hidden" name="_gotcha" style={{ display: "none" }} />
@@ -91,7 +79,7 @@ function Contact() {
           </motion.button>
         </motion.form>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
