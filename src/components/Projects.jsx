@@ -194,7 +194,7 @@ function Projects() {
 
       <button
         onClick={() => setShowExperimental(!showExperimental)}
-        className="aProf mt-10 px-6 py-3 bg-[#F3D545] text-[#521414] rounded-lg text-md font-semibold hover:bg-[#611430] hover:text-[#F3D545] transition-all"
+        className="aProf mt-10 px-6 py-3 bg-[#F3D545] text-[#521414] rounded-lg text-md font-semibold hover:bg-[#611430] hover:text-[#F3D545] transition-all cursor-pointer"
       >
         {showExperimental
           ? "Stop boasting.."

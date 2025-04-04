@@ -73,7 +73,7 @@ function Contact() {
           <motion.button
             type="submit"
             whileHover={{ scale: 1.05 }}
-            className="boast w-full bg-yellow-400 text-black font-bold py-3 rounded-lg transition-all duration-300 hover:bg-yellow-500"
+            className="aProf cursor-pointer w-full bg-yellow-400 text-black font-bold py-3 rounded-lg transition-all duration-300 hover:bg-yellow-500"
           >
             Send
           </motion.button>
