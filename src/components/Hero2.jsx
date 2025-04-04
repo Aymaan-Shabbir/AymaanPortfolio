@@ -11,7 +11,7 @@ function Hero2() {
         <h1 className="name text-5xl sm:text-6xl md:text-6xl lg:text-6xl font-bold animate-fade-in transition-all duration-300 hover:scale-105 hover:text-[#fff7d6]">
           AYMAAN SHABBIR IBRAHIM
         </h1>
-        <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-2xl animate-fade-in">
+        <p className=" aProf mt-4 text-sm sm:text-base md:text-lg lg:text-2xl animate-fade-in">
           <span className="aProf font-bold">Full Stack </span>
           <span className="aProf italic">Engineer.</span>
           <br />
@@ -54,7 +54,7 @@ function Hero2() {
         </div>
 
         {/* Social links on right */}
-        <div className="flex flex-wrap gap-4 text-xs sm:text-sm md:text-base font-semibold mt-10 sm:mt-12">
+        <div className="flex flex-wrap gap-4 text-xs sm:text-lg md:text-base font-semibold mt-10 sm:mt-12">
           <a
             href="https://leetcode.com/u/AymaanShabbir"
             target="_blank"

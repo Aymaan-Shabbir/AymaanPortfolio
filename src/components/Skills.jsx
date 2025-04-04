@@ -153,7 +153,7 @@ function Skills() {
 
         <button
           onClick={handleNextQuote}
-          className="quoteBTN mt-4 px-4 py-2 bg-[#FFD65A] text-[#aa0505] rounded-lg font-semibold hover:bg-[#aa0505] hover:text-[#F3D545] transition"
+          className="quoteBTN mt-4 px-4 py-2 bg-[#FFD65A] text-[#aa0505] rounded-lg font-semibold hover:bg-[#aa0505] hover:text-[#F3D545] transition cursor-pointer"
         >
           Epictetus?
         </button>
