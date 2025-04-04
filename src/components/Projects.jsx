@@ -30,7 +30,7 @@ const techLogos = {
 
 const projects = [
   {
-    title: "Kolroam",
+    title: "KolRoam",
     description: "A seamless social media and tour guide app.",
     techStack: [
       "Next.js",
@@ -160,10 +160,12 @@ function Projects() {
                 className="h-full w-full object-cover"
               />
             </div>
-            <h3 className="text-xl font-semibold mt-3 text-[#F3D545]">
+            <h3 className="name text-xl font-semibold mt-3 text-yellow-500 ">
               {project.title}
             </h3>
-            <p className="text-white text-sm mb-2">{project.description}</p>
+            <p className="aProf text-white text-sm mb-2">
+              {project.description}
+            </p>
             <div className="flex flex-wrap gap-2 mb-3">
               {project.techStack.map((tech, i) => (
                 <span
