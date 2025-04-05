@@ -128,6 +128,7 @@ function Projects() {
   return (
     <div
       id="projects"
+      data-aos="fade-up"
       className="w-full min-h-screen pt-24 pb-16 flex flex-col items-center text-white bg-cover bg-center"
       style={{ backgroundImage: 'url("/theogbg.jpg")' }}
     >
@@ -140,9 +141,10 @@ function Projects() {
         Production Level Applications.
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl px-3">
+      <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl px-3">
         {projects.map((project, index) => (
           <motion.div
+            data-aos="zoom-in-right"
             key={index}
             className="bg-[#1e1e1e] p-4 rounded-lg shadow-md hover:scale-105 transition-transform"
             whileHover={{
@@ -208,6 +210,7 @@ function Projects() {
           {experimentalProjects.map((project, index) => (
             <motion.div
               key={index}
+              data-aos="zoom-in-left"
               className="bg-[#1e1e1e] p-4 rounded-lg shadow-md hover:scale-105 transition-transform"
               whileHover={{
                 scale: 1.01,

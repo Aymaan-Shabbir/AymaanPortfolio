@@ -31,6 +31,7 @@ function Contact() {
 
         {/* Contact Form */}
         <motion.form
+          data-aos="zoom-out-down"
           action="https://getform.io/f/bgdpqvka"
           method="POST"
           className="w-full p-6 rounded-lg shadow-lg border border-gray-700 backdrop-blur-lg bg-white/20 text-white transition-all duration-300 hover:bg-white/30 relative"

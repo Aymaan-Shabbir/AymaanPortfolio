@@ -99,6 +99,7 @@ function Skills() {
   return (
     <div
       id="skills"
+      data-aos="fade-up"
       className="w-full min-h-screen py-15 flex flex-col items-center text-[#F3D545]"
       style={{
         backgroundImage: `url('/theogbg.jpg')`,
@@ -113,6 +114,7 @@ function Skills() {
         {skillsData.map((category, index) => (
           <motion.div
             key={index}
+            data-aos="zoom-in-up"
             className="bg-[#1e1e1e] p-6 rounded-lg shadow-md border-2 border-transparent"
             whileHover={{
               scale: 1.05,
@@ -160,7 +162,7 @@ function Skills() {
       </div>
 
       {/* LeetCode Stats */}
-      <div className="flex justify-center mt-5 mx-5">
+      <div data-aos="zoom-out" className="flex justify-center mt-5 mx-5">
         <img
           src="https://leetcard.jacoblin.cool/AymaanShabbir?theme=forest&font=Kanit&ext=heatmap"
           alt="LeetCode Stats"

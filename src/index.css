@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Share+Tech+Mono&family=Zen+Dots&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import "aos/dist/aos.css";
 @import "tailwindcss";
 @font-face {
   font-family: "Avengers";
@@ -16,6 +17,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  background-color: #b2a97c;
 }
 ul > li {
   font-family: "Zen Dots", sans-serif;
@@ -171,42 +173,94 @@ ul > li > a {
   }
 }
 
-.animate-glitch {
-  animation: glitch 2.5s infinite;
-}
+/* Custom fade-in animation */
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out both;
+  }
 
-/* Neon Pulse */
-@keyframes pulseBorder {
+  .fade-delay-100 {
+    animation-delay: 0.1s;
+  }
+  .fade-delay-200 {
+    animation-delay: 0.2s;
+  }
+  .fade-delay-300 {
+    animation-delay: 0.3s;
+  }
+  .fade-delay-400 {
+    animation-delay: 0.4s;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .zoom-bg {
+    animation: zoomIn 10s ease-in-out infinite alternate;
+  }
+
+  @keyframes zoomIn {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05);
+    }
+  }
+}
+@keyframes blink {
   0%,
   100% {
-    box-shadow: 0 0 4px #0ff, 0 0 8px #0ff, 0 0 12px #0ff;
+    border-color: transparent;
   }
   50% {
-    box-shadow: 0 0 6px #f0f, 0 0 10px #0ff, 0 0 18px #f0f;
+    border-color: white;
   }
 }
 
-.neon-border {
-  animation: pulseBorder 2s infinite;
-  border: 2px solid #0ff;
-  border-radius: 0.5rem;
+/* Add this to hide cursor after typing ends */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
-/* Data Stream / Scan Lines */
-@keyframes scanline {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0.1;
-  }
-  50% {
-    opacity: 0.4;
-  }
+@keyframes blink {
+  0%,
   100% {
-    transform: translateY(100%);
-    opacity: 0.1;
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
   }
 }
 
-.animate-scanline {
-  animation: scanline 3s linear infinite;
+@keyframes hideCursor {
+  to {
+    border-right: none;
+  }
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+
+  animation: typing 5s steps(22) forwards, hideCursor 0s linear 9.5s forwards;
 }
