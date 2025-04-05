@@ -120,7 +120,7 @@ function Hero2() {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className={`bg-[#C2BC9B] aProf text-white py-2 px-4 rounded-lg hover:bg-opacity-80 transition-all shadow-md hover:shadow-lg hover:scale-105 hover:shadow-${link.shadow} border-1 border-black hover-glow`}
+              className={`bg-[#C2BC9B] aProf text-white py-2 px-4 rounded-lg hover:bg-opacity-80 transition-all shadow-md hover:shadow-lg hover:scale-105 hover:shadow-${link.shadow} border-1 border-black hover-glow hover:text-red-800`}
             >
               {link.name}
             </a>
