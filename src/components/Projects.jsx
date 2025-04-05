@@ -146,7 +146,7 @@ function Projects() {
           <motion.div
             data-aos="zoom-in-right"
             key={index}
-            className="bg-[#1e1e1e] p-4 rounded-lg shadow-md hover:scale-105 transition-transform"
+            className="bg-[#7E7B40] p-4 rounded-lg shadow-md hover:scale-105 transition-transform"
             whileHover={{
               scale: 1.01,
               rotate: 1.3,
@@ -155,7 +155,7 @@ function Projects() {
             }}
             transition={{ type: "spring", stiffness: 200 }}
           >
-            <div className="h-40 w-full bg-gray-700 rounded-lg overflow-hidden">
+            <div className="h-40 w-full bg-[#7E7B40] rounded-lg overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
@@ -211,7 +211,7 @@ function Projects() {
             <motion.div
               key={index}
               data-aos="zoom-in-left"
-              className="bg-[#1e1e1e] p-4 rounded-lg shadow-md hover:scale-105 transition-transform"
+              className="bg-[#7E7B40] p-4 rounded-lg shadow-md hover:scale-105 transition-transform"
               whileHover={{
                 scale: 1.01,
                 rotate: 1.3,
@@ -220,17 +220,19 @@ function Projects() {
               }}
               transition={{ type: "spring", stiffness: 200 }}
             >
-              <div className="h-36 w-full bg-gray-700 rounded-lg overflow-hidden">
+              <div className="h-36 w-full bg-[#7E7B40] rounded-lg overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="h-full w-full object-contain"
                 />
               </div>
-              <h3 className="text-xl font-semibold mt-3 text-[#F3D545]">
+              <h3 className="name text-xl font-semibold mt-3 text-[#F3D545]">
                 {project.title}
               </h3>
-              <p className="text-white text-sm mb-2">{project.description}</p>
+              <p className="text-white text-sm mb-2 aProf">
+                {project.description}
+              </p>
               <div className="flex flex-wrap gap-2 mb-3">
                 {project.techStack.map((tech, i) => (
                   <span

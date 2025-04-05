@@ -114,8 +114,8 @@ function Skills() {
         {skillsData.map((category, index) => (
           <motion.div
             key={index}
-            data-aos="zoom-in-up"
-            className="bg-[#1e1e1e] p-6 rounded-lg shadow-md border-2 border-transparent"
+            data-aos="fade-down"
+            className="bg-[#7E7B40] p-6 rounded-lg shadow-md border-2 border-transparent"
             whileHover={{
               scale: 1.05,
               rotate: 1.5,
@@ -125,7 +125,7 @@ function Skills() {
             transition={{ type: "spring", stiffness: 200 }}
           >
             <h2 className="text-2xl font-bold mb-2">{category.title}</h2>
-            <p className="text-gray-400 mb-4">{category.description}</p>
+            <p className="text-white mb-4">{category.description}</p>
             <div className="flex flex-wrap gap-2">
               {category.skills.map((skill, idx) => (
                 <span
@@ -148,7 +148,7 @@ function Skills() {
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "100vw", opacity: 0 }}
           transition={{ duration: 1, ease: "easeInOut" }}
-          className="text-base sm:text-sm xs:text-xs italic text-center px-4 max-w-xs sm:max-w-sm leading-relaxed text-red-800"
+          className="text-base sm:text-sm xs:text-xs italic text-center px-4 max-w-xs sm:max-w-sm leading-relaxed text-red-800 font-bold"
         >
           {`“${quotes[quoteIndex]}”`}
         </motion.p>
