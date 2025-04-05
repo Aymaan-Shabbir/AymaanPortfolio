@@ -34,7 +34,7 @@ function Hero2() {
         <h1 className="name text-5xl sm:text-6xl md:text-6xl lg:text-6xl font-bold animate-fade-in fade-delay-100 ">
           AYMAAN SHABBIR IBRAHIM
         </h1>
-        <p className="mt-4 text-sm sm:text-base md:text-lg lg:text-2xl animate-fade-in fade-delay-200">
+        <p className="aProf mt-4 text-sm sm:text-base md:text-lg lg:text-2xl animate-fade-in fade-delay-200">
           <span className="aProf font-bold typewriter">
             Full Stack Engineer
           </span>
@@ -44,9 +44,7 @@ function Hero2() {
         </p>
       </div>
 
-      {/* Media & Links Section */}
       <div className="relative z-10 flex justify-between items-center w-full px-4 sm:px-10 md:px-20 mt-28 gap-4 flex-wrap">
-        {/* Video on left */}
         <div
           data-aos="zoom-up-right"
           className="w-44 h-28 sm:w-52 sm:h-32 md:w-64 md:h-36 lg:w-72 lg:h-40 rounded-2xl overflow-hidden border-2 border-white shadow-xl mt-10 sm:mt-12 transition-transform duration-300 hover:scale-105 animate-fade-in fade-delay-300"
