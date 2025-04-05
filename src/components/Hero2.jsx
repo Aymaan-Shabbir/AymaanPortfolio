@@ -84,9 +84,17 @@ function Hero2() {
             />
           )}
         </div>
-        <p className="profName text-red-800 font-semibold text-xs sm:text-sm mt-2 animate-pulse w-44 sm:w-52 md:w-64 lg:w-72 text-center">
-          ⚠️ Do not hover the video.
-        </p>
+        <div className="font-bold">
+          {!isHovered ? (
+            <p className="profName text-red-800 font-semibold text-xs sm:text-sm mt-2 animate-pulse w-44 sm:w-52 md:w-64 lg:w-72 text-center">
+              ⚠️ Do not hover the video.
+            </p>
+          ) : (
+            <p className="profName text-red-800 font-semibold text-lg sm:text-sm mt-2 animate-pulse w-44 sm:w-52 md:w-64 lg:w-72 text-center">
+              The Dreams .
+            </p>
+          )}
+        </div>
 
         {/* Social Links */}
         <div className="flex flex-wrap gap-4 text-xs sm:text-lg md:text-base font-semibold mt-10 sm:mt-12 animate-fade-in fade-delay-400">
