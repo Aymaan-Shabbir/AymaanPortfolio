@@ -59,7 +59,7 @@ function Hero2() {
             href="https://leetcode.com/u/AymaanShabbir"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#9D9773] aProf text-white py-2 px-4 rounded-full hover:bg-opacity-80 transition-all shadow-md hover:shadow-lg hover:scale-105 hover:shadow-yellow-300"
+            className="bg-[#9D9773] aProf text-white py-2 px-4 rounded-full hover:bg-opacity-80 transition-all shadow-md hover:shadow-lg hover:scale-105 hover:shadow-yellow-300 border-1 border-black"
           >
             LeetCode
           </a>
@@ -67,7 +67,7 @@ function Hero2() {
             href="https://github.com/Aymaan-Shabbir"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#9D9773] aProf text-white py-2 px-4 rounded-full hover:bg-opacity-80 transition-all shadow-md hover:shadow-lg hover:scale-105 hover:shadow-purple-300"
+            className="bg-[#9D9773] aProf text-white py-2 px-4 rounded-full hover:bg-opacity-80 transition-all shadow-md hover:shadow-lg hover:scale-105 hover:shadow-purple-300 border-1 border-black"
           >
             GitHub
           </a>
@@ -75,7 +75,7 @@ function Hero2() {
             href="https://www.linkedin.com/in/aymaan-shabbir-012417270/"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#9D9773] aProf text-white py-2 px-4 rounded-full hover:bg-opacity-80 transition-all shadow-md hover:shadow-lg hover:scale-105 hover:shadow-blue-400"
+            className="bg-[#9D9773] aProf text-white py-2 px-4 rounded-full hover:bg-opacity-80 transition-all shadow-md hover:shadow-lg hover:scale-105 hover:shadow-blue-400 border-1 border-black"
           >
             LinkedIn
           </a>
