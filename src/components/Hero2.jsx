@@ -86,11 +86,11 @@ function Hero2() {
         </div>
         <div className="font-bold">
           {!isHovered ? (
-            <p className="profName text-red-800 font-semibold text-xs sm:text-sm mt-2 animate-pulse w-44 sm:w-52 md:w-64 lg:w-72 text-center">
+            <p className="aProf text-red-800 font-bold text-xs sm:text-sm mt-2 animate-pulse w-44 sm:w-52 md:w-64 lg:w-72 text-center">
               ⚠️ Do not hover the video.
             </p>
           ) : (
-            <p className="profName text-red-800 font-semibold text-lg sm:text-sm mt-2 animate-pulse w-44 sm:w-52 md:w-64 lg:w-72 text-center">
+            <p className="aProf text-red-800 font-bold text-lg sm:text-sm mt-2 animate-pulse w-44 sm:w-52 md:w-64 lg:w-72 text-center">
               The Dreams .
             </p>
           )}
