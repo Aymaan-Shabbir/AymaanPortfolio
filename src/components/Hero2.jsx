@@ -10,7 +10,7 @@ function Hero2() {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#9D9773] text-white relative overflow-hidden px-4 sm:px-6 md:px-8 py-10 text-shadow-all animate-slide-up">
+    <div className="min-h-screen  bg-[#9D9773] text-white relative overflow-hidden px-4 sm:px-6 md:px-8 py-10 text-shadow-all animate-slide-up">
       {/* Hover Video Background */}
       <video
         src={hoverBg}

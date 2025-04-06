@@ -129,7 +129,7 @@ function Projects() {
     <div
       id="projects"
       data-aos="fade-up"
-      className="w-full min-h-screen pt-24 pb-16 flex flex-col items-center text-white bg-cover bg-center"
+      className="w-full min-h-screen pt-24 pb-16 flex flex-col items-center text-white bg-cover bg-center overflow-hidden"
       style={{ backgroundImage: 'url("/theogbg.jpg")' }}
     >
       <motion.h2

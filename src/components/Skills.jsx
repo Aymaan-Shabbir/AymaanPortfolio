@@ -110,7 +110,7 @@ function Skills() {
       }}
     >
       {/* Skills Grid */}
-      <div className="skillCard grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl m-3">
+      <div className="skillCard overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl m-3">
         {skillsData.map((category, index) => (
           <motion.div
             key={index}

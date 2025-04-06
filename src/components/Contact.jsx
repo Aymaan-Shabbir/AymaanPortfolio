@@ -10,7 +10,7 @@ function Contact() {
     <div
       id="contact"
       ref={ref}
-      className="w-full min-h-screen flex flex-col items-center py-20 px-5 md:px-10 bg-cover bg-center bg-no-repeat"
+      className=" overflow-hidden w-full min-h-screen flex flex-col items-center py-20 px-5 md:px-10 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/theogbg.jpg')" }}
     >
       <div className="max-w-2xl w-full relative">
