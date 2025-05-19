@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 const worksData = [
   {
-    title: "GT Engineer.",
-    company: "LTI Mindtree.",
-    duration: "Mar 2025 - Present",
-    image: "https://i.ibb.co/271Y9GVM/lti.jpg",
+    title: "Programmer Analyst Intern",
+    company: "Cognizant.",
+    duration: "May 2025 - Present",
+    image: "https://i.ibb.co/H0qgv96/cogni.jpg",
     location: "Hybrid",
     technologies: ["Software Development"],
   },
