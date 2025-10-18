@@ -13,6 +13,8 @@ import {
   SiJavascript,
   SiHtml5,
   SiCss3,
+  SiExpress,
+  SiMongodb,
 } from "react-icons/si";
 
 const techLogos = {
@@ -26,14 +28,16 @@ const techLogos = {
   JavaScript: <SiJavascript className="text-yellow-400" />,
   HTML: <SiHtml5 className="text-orange-500" />,
   CSS: <SiCss3 className="text-blue-400" />,
+  Express: <SiExpress className="text-gray-100" />,
+  MongoDB: <SiMongodb className="text-green-500" />,
 };
 
 const projects = [
   {
     title: "Edusphere",
     description:
-      "An education management platform built during my Cognizant internship — helps institutions manage courses, teachers, and students efficiently.",
-    techStack: ["React", "Tailwind CSS", "JavaScript"],
+      "An e-learning and education management platform built during my Cognizant internship — designed to manage courses, teachers, and students efficiently.",
+    techStack: ["React", "Tailwind CSS", "JavaScript", "Express", "MongoDB"],
     github: "https://github.com/Aymaan-Shabbir/Edusphere",
     website: "https://edusph.netlify.app",
     image: "https://i.ibb.co/8Dm7BYSx/Screenshot-2025-10-18-143151.png",
