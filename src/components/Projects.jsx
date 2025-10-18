@@ -30,6 +30,15 @@ const techLogos = {
 
 const projects = [
   {
+    title: "Edusphere",
+    description:
+      "An education management platform built during my Cognizant internship — helps institutions manage courses, teachers, and students efficiently.",
+    techStack: ["React", "Tailwind CSS", "JavaScript"],
+    github: "https://github.com/Aymaan-Shabbir/Edusphere",
+    website: "https://edusph.netlify.app",
+    image: "https://i.ibb.co/8Dm7BYSx/Screenshot-2025-10-18-143151.png",
+  },
+  {
     title: "KolRoam",
     description: "A seamless social media and tour guide app.",
     techStack: [
