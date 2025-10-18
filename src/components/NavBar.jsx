@@ -8,7 +8,14 @@ const NavBar = () => {
   const resumeLink =
     "https://drive.google.com/file/d/1-SfVxu-v-_uRh2UmJXNFwNSbhutlMyLB/view?usp=drivesdk";
 
-  const menuItems = ["Skills", "Projects", "Works", "Contact"];
+  const menuItems = [
+    "About",
+    "Skills",
+    "Projects",
+    "Works",
+    "Certifications",
+    "Contact",
+  ];
 
   return (
     <nav className="fixed top-5 right-5 z-50">
@@ -16,7 +23,7 @@ const NavBar = () => {
       <motion.button
         animate={{ rotate: isOpen ? 90 : 0 }}
         transition={{ duration: 0.3 }}
-        className={`cursor-pointer w-16 h-16 flex items-center justify-center rounded-full border-4 border-[#9D9773] bg-black bg-opacity-60 backdrop-blur-md shadow-lg shadow-[#9D9773]`}
+        className="cursor-pointer w-16 h-16 flex items-center justify-center rounded-full border-4 border-[#9D9773] bg-black bg-opacity-60 backdrop-blur-md shadow-lg shadow-[#9D9773]"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? (
@@ -34,7 +41,7 @@ const NavBar = () => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0, opacity: 0 }}
             transition={{ duration: 0.4 }}
-            className="fixed top-10 right-10 w-56 h-56 bg-[#9D9773] bg-opacity-90 backdrop-blur-2xl rounded-full flex flex-col items-center justify-center shadow-xl shadow-[#9D9773]"
+            className="fixed top-10 right-10 w-64 h-64 bg-[#9D9773] bg-opacity-90 backdrop-blur-2xl rounded-full flex flex-col items-center justify-center shadow-xl shadow-[#9D9773]"
           >
             {menuItems.map((section, index) => (
               <motion.div

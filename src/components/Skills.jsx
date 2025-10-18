@@ -20,8 +20,12 @@ import {
   SiShadcnui,
   SiBootstrap,
   SiNodedotjs,
+  SiKubernetes,
+  SiJenkins,
+  SiLangchain,
 } from "react-icons/si";
 
+// Skills data
 const skillsData = [
   {
     title: "Frontend",
@@ -64,10 +68,23 @@ const skillsData = [
     ],
   },
   {
+    title: "AI & DevOps",
+    description: "Tools I use for AI workflows and DevOps pipelines.",
+    skills: [
+      { name: "LangChain", icon: <SiLangchain style={{ color: "#666666" }} /> },
+      { name: "LangGraph", icon: <SiLangchain style={{ color: "#2E7FFF" }} /> },
+      { name: "Docker", icon: <FaDocker style={{ color: "#2496ED" }} /> },
+      {
+        name: "Kubernetes",
+        icon: <SiKubernetes style={{ color: "#326CE5" }} />,
+      },
+      { name: "Jenkins", icon: <SiJenkins style={{ color: "#D33833" }} /> },
+    ],
+  },
+  {
     title: "Others",
     description: "Additional tools and platforms I work with.",
     skills: [
-      { name: "Docker", icon: <FaDocker style={{ color: "#2496ED" }} /> },
       { name: "CI/CD", icon: "⚙️" },
       { name: "Git", icon: <FaGit style={{ color: "#F05032" }} /> },
       { name: "GitHub", icon: <FaGithub style={{ color: "#181717" }} /> },
@@ -76,6 +93,7 @@ const skillsData = [
   },
 ];
 
+// Quotes
 const quotes = [
   "It’s not what happens to you, but how you react to it that matters.",
   "You have power over your mind — not outside events. Realize this, and you will find strength.",
@@ -99,7 +117,6 @@ function Skills() {
   return (
     <div
       id="skills"
-      data-aos="fade-up"
       className="w-full min-h-screen py-15 flex flex-col items-center text-[#F3D545]"
       style={{
         backgroundImage: `url('/theogbg.jpg')`,
@@ -114,7 +131,6 @@ function Skills() {
         {skillsData.map((category, index) => (
           <motion.div
             key={index}
-            data-aos="fade-down"
             className="bg-[#7E7B40] p-6 rounded-lg shadow-md border-2 border-transparent"
             whileHover={{
               scale: 1.05,
@@ -162,7 +178,7 @@ function Skills() {
       </div>
 
       {/* LeetCode Stats */}
-      <div data-aos="zoom-out" className="flex justify-center mt-5 mx-5">
+      <div className="flex justify-center mt-5 mx-5">
         <img
           src="https://leetcard.jacoblin.cool/AymaanShabbir?theme=forest&font=Kanit&ext=heatmap"
           alt="LeetCode Stats"

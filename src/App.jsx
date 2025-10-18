@@ -8,6 +8,8 @@ import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
+import About from "./components/About";
+import Certifications from "./components/Certifications";
 
 function App() {
   useEffect(() => {
@@ -21,9 +23,11 @@ function App() {
     <>
       <NavBar />
       <Home />
+      <About />
       <Skills />
       <Projects />
       <Works />
+      <Certifications />
       <Contact />
     </>
   );
