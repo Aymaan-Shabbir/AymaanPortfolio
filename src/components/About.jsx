@@ -5,7 +5,7 @@ function About() {
   return (
     <div
       id="about"
-      className="w-full min-h-screen py-16 flex flex-col items-center text-[#F3D545] aProf m-0"
+      className="w-full min-h-screen py-16 flex flex-col items-center text-[#F3D545] aProf px-3"
       style={{
         backgroundImage: `url('/theogbg.jpg')`,
         backgroundSize: "cover",
