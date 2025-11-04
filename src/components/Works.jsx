@@ -5,9 +5,18 @@ import { motion } from "framer-motion";
 
 const worksData = [
   {
+    title: "Programmer Analyst Trainee",
+    company: "Cognizant.",
+    duration: "Nov 2025 - Present",
+    image: "https://i.ibb.co/H0qgv96/cogni.jpg",
+    location: "Chennai",
+    technologies: ["Software Development"],
+  },
+
+  {
     title: "Programmer Analyst Intern",
     company: "Cognizant.",
-    duration: "May 2025 - Present",
+    duration: "May 2025 - Sept 2025",
     image: "https://i.ibb.co/H0qgv96/cogni.jpg",
     location: "Hybrid",
     technologies: ["Software Development"],
