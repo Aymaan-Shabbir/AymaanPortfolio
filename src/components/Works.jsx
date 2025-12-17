@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 const worksData = [
   {
-    title: "Programmer Analyst Trainee",
+    title: "Verizon VDSI AI",
     company: "Cognizant.",
     duration: "Nov 2025 - Present",
     image: "https://i.ibb.co/H0qgv96/cogni.jpg",
     location: "Chennai",
-    technologies: ["Software Development"],
+    technologies: ["LangGraph, LangChain, RAG, Microservices, MCPs"],
   },
 
   {

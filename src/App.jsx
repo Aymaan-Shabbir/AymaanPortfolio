@@ -8,7 +8,7 @@ import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
 import Works from "./components/Works";
 import Contact from "./components/Contact";
-import About from "./components/About";
+// import About from "./components/About";
 import Certifications from "./components/Certifications";
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
     <>
       <NavBar />
       <Home />
-      <About />
+      {/* <About /> */}
       <Skills />
       <Projects />
       <Works />
